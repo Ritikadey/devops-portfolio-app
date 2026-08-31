@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DevOps Portfolio App</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: #1e293b;
+            border-radius: 12px;
+            padding: 2.5rem 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+            max-width: 480px;
+        }
+        h1 { margin-top: 0; font-size: 1.6rem; }
+        .meta { font-size: 0.9rem; color: #94a3b8; line-height: 1.8; }
+        .meta span { color: #38bdf8; font-weight: 600; }
+        .badge {
+            display: inline-block;
+            background: #16a34a;
+            color: white;
+            font-size: 0.75rem;
+            padding: 2px 10px;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="badge">running</div>
+        <h1>DevOps Portfolio App</h1>
+        <p class="meta">
+            version: <span>{{ version }}</span><br>
+            environment: <span>{{ environment }}</span><br>
+            hostname: <span>{{ hostname }}</span>
+        </p>
+        <p class="meta">Health check: <code>/health</code> &nbsp;|&nbsp; Build info: <code>/api/info</code></p>
+    </div>
+</body>
+</html>
